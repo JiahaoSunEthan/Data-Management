@@ -1,0 +1,6 @@
+hadoop com.sun.tools.javac.Main Part.java
+jar cf part.jar Part*.class
+hadoop jar part.jar Part input output
+scp -i dsci551-jiahaosun.pem Part.java ec2-user@ec2-3-141-22-75.us-east-2.compute.amazonaws.com:/home/ec2-user/lab
+scp -i "dsci551-jiahaosun.pem"  ec2-user@ec2-3-141-22-75.us-east-2.compute.amazonaws.com:/home/ec2-user/lab/part.jar .
+scp -i "dsci551-jiahaosun.pem"  ec2-user@ec2-3-141-22-75.us-east-2.compute.amazonaws.com:/home/ec2-user/lab/output/part-r-00000 .
